@@ -1,0 +1,71 @@
+{
+  "_readme": "Single source of truth for all prices and details. Confirmed facts only. Anything starting with 'CONFIRM:' is NOT confirmed and must render as a visible [placeholder] on flyers. Never invent durations, inclusions, policies, or prices.",
+
+  "contact": {
+    "whatsapp_number": "CONFIRM: one shared number or one per brand?",
+    "wa_link": "CONFIRM: wa.me link once number is confirmed",
+    "location": "Nosara, Costa Rica"
+  },
+
+  "nja_experiences": [
+    {
+      "id": "atv-rental",
+      "name": "ATV Rental — Kymco 250cc",
+      "price": "$80 / day",
+      "price_confirmed": true,
+      "riders": "CONFIRM: riders 1-2",
+      "helmets": "CONFIRM: helmets included?",
+      "gas": "CONFIRM: gas included?",
+      "delivery": "CONFIRM: delivery to accommodation?",
+      "photo": "atv-jungle.jpg"
+    },
+    {
+      "id": "turtle-arribada",
+      "name": "Turtle Arribada — Ostional",
+      "price": "$75 / person",
+      "price_confirmed": true,
+      "min_guests": 2,
+      "timing": "CONFIRM: timing window",
+      "operator": "CONFIRM: operator / guide",
+      "note": "Natural event — depends on tides and the turtles' cycle. NEVER guarantee sightings; frame respectfully.",
+      "photo": "turtle-arribada.jpg"
+    },
+    {
+      "id": "coffee-tour-utv",
+      "name": "Coffee Tour by UTV",
+      "price": "$520 private, up to 4 guests",
+      "price_confirmed": true,
+      "duration": "CONFIRM: duration",
+      "inclusions": "CONFIRM: inclusions",
+      "photo": "coffee-tour.jpg"
+    },
+    {
+      "id": "waterfall-ride",
+      "name": "Waterfall / Jungle Ride",
+      "price": "CONFIRM: price",
+      "price_confirmed": false,
+      "duration": "CONFIRM: duration",
+      "inclusions": "CONFIRM: inclusions",
+      "photo": "waterfall.jpg"
+    }
+  ],
+
+  "nft_transportation": {
+    "note": "Full route list is ONLY for the rate sheet. General flyers say 'from $60' and push the WhatsApp inquiry.",
+    "routes": [
+      { "route": "Local Nosara", "price": "$60" },
+      { "route": "Garza", "price": "$80" },
+      { "route": "Ostional / Sámara / San Juanillo", "price": "$120" },
+      { "route": "Liberia / Tamarindo", "price": "$160" },
+      { "route": "Las Catalinas", "price": "$180" },
+      { "route": "Monteverde", "price": "$350" },
+      { "route": "La Fortuna", "price": "$380" },
+      { "route": "SJO / Santa Teresa / Jacó", "price": "$400" }
+    ],
+    "vehicles": [
+      { "name": "Mitsubishi Montero 2021", "capacity": "1-4 passengers" },
+      { "name": "Foton van", "capacity": "up to 16 passengers" }
+    ],
+    "amenities": "AC, luggage, surfboards, car seat on request (CONFIRM per booking)"
+  }
+}
