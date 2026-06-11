@@ -1,0 +1,229 @@
+/* ============================================================
+   NFT / NJA shared flyer styles — single source of truth.
+   Change the brand here and every flyer updates.
+
+   Canvas: 1080 × 1350 (4:5, WhatsApp/feed).
+   Story export adds class="story" on <body> → 1080 × 1920.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Palette */
+  --cream:  #F7F1E6;   /* canvas warm cream */
+  --jungle: #234D38;   /* primary deep jungle */
+  --teal:   #2E8C84;   /* teal water */
+  --sun:    #DFA53B;   /* golden sun */
+  --clay:   #BD6B45;   /* clay earth */
+  --ink:    #1C3A2C;   /* text ink */
+
+  /* Type */
+  --serif: 'Fraunces', 'Playfair Display', serif;
+  --sans:  'Hanken Grotesk', 'Mulish', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  width: 1080px;
+  font-family: var(--sans);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The flyer canvas */
+.flyer {
+  width: 1080px;
+  height: 1350px;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+body.story .flyer { height: 1920px; }
+
+/* ---------- Hero (photo, top ~57%) ---------- */
+
+.hero {
+  position: relative;
+  flex: 0 0 57%;
+  background-color: var(--jungle);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Soft gradient so headline stays readable on any photo */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(28, 58, 44, 0.25) 0%,
+    rgba(28, 58, 44, 0.00) 40%,
+    rgba(28, 58, 44, 0.45) 100%);
+}
+
+/* Visible marker while a real photo is missing.
+   DELETE the .photo-slot element once the photo is in assets/photos/. */
+.photo-slot {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(160deg, var(--jungle) 0%, var(--teal) 100%);
+  color: var(--cream);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  z-index: 1;
+}
+
+/* Small brand mark, top-left */
+.brand-mark {
+  position: absolute;
+  top: 44px;
+  left: 52px;
+  z-index: 2;
+  color: var(--cream);
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 12px rgba(28, 58, 44, 0.45);
+}
+.brand-mark small {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.30em;
+  opacity: 0.9;
+}
+
+/* Thin badge, top-right */
+.badge {
+  position: absolute;
+  top: 48px;
+  right: 52px;
+  z-index: 2;
+  padding: 12px 26px;
+  border: 1.5px solid var(--cream);
+  border-radius: 999px;
+  color: var(--cream);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  backdrop-filter: blur(2px);
+}
+
+/* Serif headline sitting on the hero */
+.headline {
+  position: absolute;
+  left: 52px;
+  right: 52px;
+  bottom: 44px;
+  z-index: 2;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 84px;
+  line-height: 1.05;
+  color: var(--cream);
+  text-shadow: 0 2px 24px rgba(28, 58, 44, 0.5);
+}
+
+/* ---------- Content (warm cream, bottom ~43%) ---------- */
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 52px 52px 38px;
+}
+
+.description {
+  font-size: 31px;
+  line-height: 1.45;
+  max-width: 880px;
+  color: var(--ink);
+}
+
+.chips {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+.chip {
+  padding: 13px 28px;
+  border: 1.5px solid var(--jungle);
+  border-radius: 999px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--jungle);
+  white-space: nowrap;
+}
+
+/* Price + CTA row */
+.price-row {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 30px;
+}
+.price {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 76px;
+  color: var(--jungle);
+  line-height: 1;
+}
+.price small {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--jungle);
+  color: var(--cream);
+  border-radius: 999px;
+  padding: 24px 44px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+/* Simple WhatsApp-style dot icon, no image dependency */
+.cta::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--sun);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1.5px solid rgba(35, 77, 56, 0.25);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--jungle);
+  letter-spacing: 0.04em;
+}
+
+/* Unconfirmed data — always visibly bracketed, clay color so it can't ship unnoticed */
+.placeholder { color: var(--clay); }
