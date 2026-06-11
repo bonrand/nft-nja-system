@@ -1,0 +1,13 @@
+{
+  "name": "nft-nja-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flyer production system for Nosara Fun Travel + Nosara Jungle Adventures",
+  "scripts": {
+    "export": "node scripts/export.js",
+    "export:story": "node scripts/export.js --story"
+  },
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
