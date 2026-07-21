@@ -2,8 +2,9 @@
   "_readme": "Single source of truth for all prices and details. Confirmed facts only. Anything starting with 'CONFIRM:' is NOT confirmed and must render as a visible [placeholder] on flyers. Never invent durations, inclusions, policies, or prices.",
 
   "contact": {
-    "whatsapp_number": "CONFIRM: one shared number or one per brand?",
-    "wa_link": "CONFIRM: wa.me link once number is confirmed",
+    "whatsapp_number": "+506 8948 5335",
+    "whatsapp_owner": "Yerly — shared for NFT and NJA",
+    "wa_link": "https://wa.me/50689485335",
     "location": "Nosara, Costa Rica"
   },
 
@@ -47,6 +48,18 @@
       "duration": "CONFIRM: duration",
       "inclusions": "CONFIRM: inclusions",
       "photo": "waterfall.jpg"
+    },
+    {
+      "id": "guaitil-pottery",
+      "name": "Guaitil Pottery Tour",
+      "_status": "DRAFT — not ready for clients, missing price and schedule",
+      "price": "CONFIRM: price",
+      "price_confirmed": false,
+      "duration": "CONFIRM: duration / schedule",
+      "inclusions": "CONFIRM: inclusions",
+      "operator": "CONFIRM: operator / workshop",
+      "note": "Chorotega pottery tradition, hand-painted with natural pigments. Frame as a cultural visit, not a tourist attraction.",
+      "photo": "guaitil-hero.jpg"
     }
   ],
 

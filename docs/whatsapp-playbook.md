@@ -41,5 +41,5 @@ listed: "Let me confirm that one for you — give me a few minutes.")
 
 ---
 
-**Open question for Brandon:** one shared WhatsApp number for both brands,
-or one per brand? This decides every flyer footer.
+**WhatsApp number confirmed:** +506 8948 5335 (Yerly, shared for NFT and NJA).
+wa.me link: https://wa.me/50689485335
