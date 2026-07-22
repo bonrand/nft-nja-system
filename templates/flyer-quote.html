@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Private Quote — [Client Name]</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="flyer">
+
+  <!-- ============================================================
+       QUOTE FLYER — how to use:
+       1. Save a copy per booking if you want to keep a record, or just
+          overwrite this file each time (it's a working document, not a
+          feed post).
+       2. Swap the brand mark below to NFT or NJA depending on what
+          you're quoting (comment shows both options).
+       3. Replace every [bracketed] field with the real booking details.
+       4. Swap the hero photo to match the vehicle/experience being quoted.
+       5. Run `npm run export` — PNG lands in exports/whatsapp/flyer-quote.png,
+          ready to send straight in the WhatsApp chat.
+       Never invent a price or inclusion — leave it as [CONFIRM] if unsure.
+       ============================================================ -->
+
+  <!-- Hero photo: pick whichever matches this quote, e.g. assets/photos/atv-hero.jpg.
+       Shorter than the public flyers (40% vs 57%) — the quote panel below needs
+       more room for the client/date/vehicle/inclusions rows. -->
+  <div class="hero" style="flex: 0 0 40%; background-image: url('../assets/photos/atv-hero.jpg');">
+    <!-- Brand mark: use ONE of these two lines depending on the booking -->
+    <div class="brand-mark">Nosara<small>Jungle Adventures</small></div>
+    <!-- <div class="brand-mark">Nosara<small>Fun Travel</small></div> -->
+    <div class="badge">Private Quote</div>
+    <div class="headline" style="font-size: 60px;">ATV Rental<br>Kymco 250cc</div>
+  </div>
+
+  <div class="content quote-panel">
+    <div class="quote-client">
+      Quote for [Client Name]
+      <small>Prepared [date prepared]</small>
+    </div>
+
+    <div class="quote-details">
+      <div class="quote-row">
+        <span class="quote-label">Date</span>
+        <span class="quote-value">[booking date]</span>
+      </div>
+      <div class="quote-row">
+        <span class="quote-label">Guests</span>
+        <span class="quote-value">[pax]</span>
+      </div>
+      <div class="quote-row">
+        <span class="quote-label">Vehicle</span>
+        <span class="quote-value">[Mitsubishi Montero 2021 / Foton van / Kymco 250cc ATV]</span>
+      </div>
+      <div class="quote-row">
+        <span class="quote-label">Includes</span>
+        <span class="quote-value">[AC, luggage, helmets, etc. — confirmed items only]</span>
+      </div>
+    </div>
+
+    <div class="quote-price-row">
+      <div class="quote-price">$[amount] <small>total</small></div>
+      <div class="cta-gold">Confirm on WhatsApp</div>
+    </div>
+
+    <div class="footer">
+      <span>wa.me/50689485335</span>
+      <span>Nosara, Costa Rica</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

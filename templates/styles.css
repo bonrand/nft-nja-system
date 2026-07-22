@@ -227,3 +227,107 @@ body.story .flyer { height: 1920px; }
 
 /* Unconfirmed data — always visibly bracketed, clay color so it can't ship unnoticed */
 .placeholder { color: var(--clay); }
+
+/* ---------- Quote flyer only ----------
+   The one piece allowed a dark background: a private, 1:1 document sent
+   after a client inquiry, not a public feed post. Deep green + gold instead
+   of the cream content area. Everything else (hero, headline, footer) is
+   the same flyer anatomy as the public pieces. */
+
+.quote-panel {
+  background: var(--jungle);
+  color: var(--cream);
+}
+
+.quote-client {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 44px;
+  color: var(--cream);
+}
+.quote-client small {
+  display: block;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sun);
+  margin-bottom: 10px;
+}
+
+.quote-details {
+  margin-top: 26px;
+  border-top: 1px solid rgba(247, 241, 230, 0.2);
+}
+.quote-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(247, 241, 230, 0.2);
+}
+.quote-label {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(247, 241, 230, 0.65);
+  white-space: nowrap;
+}
+.quote-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--cream);
+  text-align: right;
+}
+
+.quote-price-row {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 28px;
+}
+.quote-price {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 72px;
+  color: var(--sun);
+  line-height: 1;
+}
+.quote-price small {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--cream);
+}
+
+/* CTA in gold — the standard .cta (jungle bg) would vanish on this dark panel */
+.cta-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--sun);
+  color: var(--jungle);
+  border-radius: 999px;
+  padding: 24px 44px;
+  font-size: 28px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.cta-gold::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--jungle);
+}
+
+.quote-panel .footer {
+  border-top-color: rgba(247, 241, 230, 0.25);
+  color: var(--cream);
+}
+.quote-panel .placeholder { color: var(--sun); }
